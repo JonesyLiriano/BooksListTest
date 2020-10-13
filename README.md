@@ -1,27 +1,26 @@
-# BooksManager
+# Herramientas y Versiones 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+Angular: 10.1.5 : Se utilizo para desarrollar la parte del cliente.
 
-## Development server
+ASP.Net Core: 3.1 : Se utilizo para desarollar la parte de backend.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Funcionamiento
 
-## Code scaffolding
+-Visualizacion, Creacion, Actualizacion y Eliminacion de Libros.
+-Validaciones de los campos de los formularios.
+-Busqueda de un Libro por su ID.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Configuraciones
 
-## Build
+Angular: La url de la web api realizada en ASP.NET Core, esta en enviroment ("https://localhost:44395/Books").
+Net Core: La url del servicio utilizado como prueba es: "https://fakerestapi.azurewebsites.net/api/Books"
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Librerias/Plugings utilizadas
 
-## Running unit tests
+Angular Material: Se utilizo para el estilo visual de la parte del cliente.
+Toastr: Se utilizo para mostrar las alertas en la parte de la parte del cliente.
+Json.Net - Newtonsoft: Se utilizo para serializar y deserializar los objetos json.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Notas
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+-La paginacion se realizo solamente en el lado del cliente.
