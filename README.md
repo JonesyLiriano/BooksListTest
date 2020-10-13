@@ -6,7 +6,7 @@ ASP.Net Core: 3.1 : Se utilizo para desarollar la parte de backend.
 
 ## Funcionamiento
 
--Visualizacion, Creacion, Actualizacion y Eliminacion de Libros.
+-Visualizacion, Creacion, Actualizacion y Eliminacion de Libros. /n
 -Validaciones de los campos de los formularios.
 -Busqueda de un Libro por su ID.
 
