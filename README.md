@@ -2,7 +2,7 @@
 
 Angular: 10.1.5 : Se utilizo para desarrollar la parte del cliente.
 
-ASP.Net Core: 3.1 : Se utilizo para desarollar la parte de backend.
+ASP.Net Core: 3.1 : Se utilizo para desarollar la parte de backend (Carpeta BooksApi).
 
 ## Funcionamiento
 
