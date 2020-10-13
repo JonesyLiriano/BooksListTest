@@ -22,7 +22,7 @@ Net Core: La url del servicio utilizado como prueba es: "https://fakerestapi.azu
 
 Angular Material: Se utilizo para el estilo visual de la parte del cliente.
 
-Toastr: Se utilizo para mostrar las alertas en la parte de la parte del cliente.
+Toastr: Se utilizo para mostrar las alertas en la parte del cliente.
 
 Json.Net - Newtonsoft: Se utilizo para serializar y deserializar los objetos json.
 
