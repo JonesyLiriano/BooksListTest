@@ -1,0 +1,59 @@
+<h1>Search Book by ID</h1>
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile colspan="1" rowspan="1">
+      <mat-form-field>
+      <mat-label>Book ID</mat-label>
+      <input type="number" matInput placeholder="Book ID" [(ngModel)]="bookID">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button mat-raised-button color="primary" type="number" [disabled]="!bookID" (click)="searchBook()">Search <mat-icon>search</mat-icon></button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="4" rowspan="5">
+    <div *ngIf="showBookResult">
+      <h2>Detail of Book: {{book.title}}...</h2>
+  <form [formGroup]="BookForm">
+    <mat-grid-list cols="2" rowHeight="70px">
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-form-field>
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="id" placeholder="ID" readonly>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" placeholder="Title of the book" readonly>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description" placeholder="Description" readonly></textarea>
+          </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-form-field>
+          <mat-label>Page Count</mat-label>
+            <input matInput formControlName="pageCount" type="number" placeholder="Page Count" readonly>
+          </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-form-field>
+          <mat-label>Excerpt</mat-label>
+            <textarea matInput formControlName="excerpt" placeholder="Excerpt" readonly></textarea>
+          </mat-form-field>
+      </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="1">
+      <mat-form-field>
+        <mat-label>Publish Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="publishDate" readonly>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+  </form>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

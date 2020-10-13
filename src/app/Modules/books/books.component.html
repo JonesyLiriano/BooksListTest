@@ -1,0 +1,59 @@
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile colspan="1" rowspan="1">
+    <h1>Books List</h1>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="1"></mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button mat-raised-button color="accent" (click)="openAddBookDialog()">
+      Add new book <mat-icon>book</mat-icon>
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-table class="mat-elevation-z8" [dataSource]="booksList">
+  <ng-container matColumnDef="iD">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let book">{{ book.id }}</td>
+  </ng-container>
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>Title</th>
+    <td mat-cell *matCellDef="let book">{{ book.title }}</td>
+  </ng-container>
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let book">{{ book.description }}</td>
+  </ng-container>
+  <ng-container matColumnDef="pageCount">
+    <th mat-header-cell *matHeaderCellDef>Page Count</th>
+    <td mat-cell *matCellDef="let book">{{ book.pageCount }}</td>
+  </ng-container>
+  <ng-container matColumnDef="excerpt">
+    <th mat-header-cell *matHeaderCellDef>Excerpt</th>
+    <td mat-cell *matCellDef="let book">{{ book.excerpt }}</td>
+  </ng-container>
+  <ng-container matColumnDef="publishDate">
+    <th mat-header-cell *matHeaderCellDef>Publish Date</th>
+    <td mat-cell *matCellDef="let book">{{ book.publishDate | date }}</td>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let book">
+      <button class="same-width-button" mat-raised-button (click)="openViewBookDialog(book)">
+        View <mat-icon>visibility</mat-icon>
+      </button>
+      <button class="same-width-button" mat-raised-button color="primary" (click)="openUpdateBookDialog(book)">
+        Update <mat-icon>update</mat-icon>
+      </button>
+      <button class="same-width-button" mat-raised-button color="warn" (click)="openDeleteBookDialog(book)">
+        Delete <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</mat-table>
+
+<mat-paginator
+  [pageSizeOptions]="[5, 10, 20, 30]"
+  showFirstLastButtons
+></mat-paginator>
